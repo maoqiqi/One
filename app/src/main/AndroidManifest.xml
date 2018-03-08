@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.march.one">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.android.march.one.OneApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/OneAppTheme.OverlapSystemBar">
+        <!--如果您未设置任何值,并且 android:resizeableActivity 不为 true,则最大纵横比默认为 1.86（大约相当于 16:9）,您的应用将无法充分利用额外的屏幕空间。-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:theme="@style/OneAppTheme.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <!--主页-->
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <!--干货分类-->
+        <activity
+            android:name=".ui.activity.GankActivity"
+            android:screenOrientation="portrait" />
+        <!--干货收藏-->
+        <activity
+            android:name=".ui.activity.GankCollectionActivity"
+            android:screenOrientation="portrait" />
+        <!--新闻详情-->
+        <activity
+            android:name=".ui.activity.NewsDetailActivity"
+            android:screenOrientation="portrait" />
+        <!--图书详情-->
+        <activity
+            android:name=".ui.activity.BookDetailActivity"
+            android:screenOrientation="portrait" />
+        <!--艺术家内容-->
+        <activity
+            android:name=".ui.activity.MusicArtistActivity"
+            android:screenOrientation="portrait" />
+        <!--专辑内容-->
+        <activity
+            android:name=".ui.activity.MusicAlbumActivity"
+            android:screenOrientation="portrait" />
+        <!--文件夹内容-->
+        <activity
+            android:name=".ui.activity.MusicFolderActivity"
+            android:screenOrientation="portrait" />
+        <!--音乐更多-->
+        <activity
+            android:name=".ui.activity.MusicMoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/OneAppDialog" />
+        <!--影视详情-->
+        <activity
+            android:name=".ui.activity.MovieDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!--导航部分-->
+        <activity
+            android:name=".ui.activity.ProjectIntroductionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.UpdateDescriptionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ScanCodeToDownloadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ProblemFeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AboutActivity"
+            android:screenOrientation="portrait" />
+
+        <!--设置-->
+        <activity
+            android:name=".ui.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+
+        <!--网页-->
+        <activity
+            android:name=".ui.activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <!--搜索-->
+        <activity
+            android:name=".ui.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+    </application>
+</manifest>

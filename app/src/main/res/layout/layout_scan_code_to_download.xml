@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPageBackground"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_height"
+        android:background="@color/colorNavigation" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorNavigation"
+        android:theme="@style/ToolBarDark"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="@string/scan_code_to_download" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_text_hint"
+        android:lineSpacingExtra="2dp"
+        android:padding="12dp"
+        android:text="@string/download"
+        android:textColor="@color/colorTextGrayDark"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/ivCode"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:src="@drawable/ic_code" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="2dp"
+        android:padding="20dp"
+        android:text="@string/star"
+        android:textColor="@color/colorTextGray"
+        android:textSize="14sp" />
+</LinearLayout>

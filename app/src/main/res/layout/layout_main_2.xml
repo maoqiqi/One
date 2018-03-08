@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPageBackground"
+    android:orientation="vertical">
+
+    <!-- 内容 -->
+    <FrameLayout
+        android:id="@+id/flContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- 底部TAB -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbHome"
+            style="@style/TabMainStyle"
+            android:drawableTop="@drawable/ic_tab_home"
+            android:text="首页"
+            android:textColor="@color/color_home_selector" />
+
+        <RadioButton
+            android:id="@+id/rbNews"
+            style="@style/TabMainStyle"
+            android:drawableTop="@drawable/ic_tab_news"
+            android:text="新闻"
+            android:textColor="@color/color_news_selector" />
+
+        <RadioButton
+            android:id="@+id/rbBook"
+            style="@style/TabMainStyle"
+            android:drawableTop="@drawable/ic_tab_book"
+            android:text="图书"
+            android:textColor="@color/color_book_selector" />
+
+        <RadioButton
+            android:id="@+id/rbMusic"
+            style="@style/TabMainStyle"
+            android:drawableTop="@drawable/ic_tab_music"
+            android:text="音乐"
+            android:textColor="@color/color_music_selector" />
+
+        <RadioButton
+            android:id="@+id/rbMovie"
+            style="@style/TabMainStyle"
+            android:drawableTop="@drawable/ic_tab_movie"
+            android:text="影视"
+            android:textColor="@color/color_movie_selector" />
+    </RadioGroup>
+</LinearLayout>

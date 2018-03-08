@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_sort_by"
+        android:orderInCategory="100"
+        android:title="@string/sort_by"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/menu_song_sort_order_az"
+                android:title="@string/sort_order_az" />
+            <item
+                android:id="@+id/menu_song_sort_order_za"
+                android:title="@string/sort_order_za" />
+            <item
+                android:id="@+id/menu_song_sort_order_artist"
+                android:title="@string/sort_order_artist" />
+            <item
+                android:id="@+id/menu_song_sort_order_album"
+                android:title="@string/sort_order_album" />
+            <item
+                android:id="@+id/menu_song_sort_order_duration"
+                android:title="@string/sort_order_duration" />
+        </menu>
+    </item>
+</menu>

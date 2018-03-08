@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5F7C8A</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#5F7C8A</color>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="bgShadowSplash">#cfcfcf</color>
+    <color name="bgJump">#88000000</color>
+
+    <!-- 页面背景的颜色 -->
+    <color name="colorPageBackground">#f2f2f5</color>
+    <color name="navigationChecked">#f2f2f2</color>
+    <!--文字黑色-->
+    <color name="colorTextBlack">#191919</color>
+    <!--文字灰色-->
+    <color name="colorTextGray">#999999</color>
+    <color name="colorTextGrayDark">#666666</color>
+
+    <!--分割线-->
+    <color name="colorDivideLine">#EBEBEB</color>
+    <!--item 的分割线-->
+    <color name="colorItemDivideLine">#FFDDDDDD</color>
+
+    <!--item 的水波纹颜色-->
+    <color name="itemBackground">#DD7D7D7D</color>
+    <!--item 的selector 选中颜色-->
+    <color name="itemLowBackground">#d9d9d9</color>
+
+    <color name="colorHome">#FF9800</color>
+
+    <!--新闻部分颜色-->
+    <color name="colorNews">#0F88EB</color>
+    <color name="colorNewsRead">#9E9E9E</color>
+    <color name="colorNewsUnread">#000000</color>
+    <color name="colorNewsSource">#A1FFFFFF</color>
+
+    <!--图书部分颜色-->
+    <color name="colorBook">#009688</color>
+
+    <!--音乐部分颜色-->
+    <color name="colorMusic">#ffce3d3a</color>
+
+    <!--影视部分颜色-->
+    <color name="colorMovie">#1e1e1e</color>
+
+    <!--Navigation部分颜色-->
+    <color name="colorNavigation">#4CAF50</color>
+
+    <color name="itemRippleBackground">#b9b9b9</color>
+
+    <color name="homeAndroid">#388E3C</color>
+    <color name="homeIos">#0377BC</color>
+    <color name="homeFront">#EF6C02</color>
+    <color name="homeRestMovie">#039588</color>
+    <color name="homeResource">#546E7A</color>
+    <color name="homeRecommend">#A02745</color>
+    <color name="homeWelfare">#FFAEC9</color>
+
+    <color name="colorTextEnable">#323232</color>
+    <color name="colorTextEnableGary">#9E9E9E</color>
+    <color name="colorTextUnEnable">#C1C1C1</color>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llItem"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivMusic"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorMusic"
+        android:src="@drawable/ic_music"
+        android:transitionName="@string/transition_music_img" />
+
+    <ImageView
+        android:id="@+id/ivFolder"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_folder"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="歌曲名称|艺术家|2009年12月新歌速递|文件夹名称"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:text="歌曲信息|艺术家信息|专辑信息|文件夹信息"
+            android:textColor="@color/colorTextGrayDark"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivMore"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_more" />
+</LinearLayout>

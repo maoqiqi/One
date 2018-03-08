@@ -1,0 +1,182 @@
+<resources>
+
+    <!--Activity动画-->
+    <style name="Animation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/open_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/close_exit</item>
+    </style>
+
+    <!-- ActionBarDrawerToggle 图标颜色 -->
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <!-- overflow menu style -->
+    <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+        <!-- 是否覆盖锚点,默认为true,即盖住Toolbar -->
+        <item name="overlapAnchor">false</item>
+        <!-- 弹出层垂直方向上的偏移,即在竖直方向上距离Toolbar的距离,值为负则会盖住Toolbar -->
+        <item name="android:dropDownVerticalOffset">4dp</item>
+        <!-- 弹出层水平方向上的偏移,即距离屏幕左边的距离,负值会导致右边出现空隙 -->
+        <item name="android:dropDownHorizontalOffset">0dp</item>
+        <item name="android:popupBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- ActionBar 三个小点更多图标 -->
+    <style name="OverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_menu_more</item>
+    </style>
+
+    <!--主题-->
+    <style name="OneAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/Animation</item>
+        <!--去除顶部下拉时的半月形阴影和上下滑动顶部和底部的虚化-->
+        <item name="android:overScrollMode">never</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+        <!--代码设置toolbar.setOverflowIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_menu_more));-->
+        <item name="actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
+    </style>
+
+    <!--覆盖系统栏-->
+    <style name="OneAppTheme.OverlapSystemBar" />
+
+    <!--全屏-->
+    <style name="OneAppTheme.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- Dialog Sheet进出动画 -->
+    <style name="DialogSheetAnimation" parent="@android:style/Theme.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_action_sheet_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_action_sheet_out</item>
+    </style>
+
+    <!-- Activity Dialog 主题-->
+    <style name="OneAppDialog" parent="@style/Theme.AppCompat.Dialog">
+        <!-- 无标题 -->
+        <item name="windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!-- Dialog 以外的区域模糊效果 -->
+        <!--<item name="android:backgroundDimEnabled">true</item>-->
+        <!-- 边框 -->
+        <!--<item name="android:windowFrame">@null</item>-->
+        <!-- 背景透明 -->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <!-- 浮于Activity之上 -->
+        <!--<item name="android:windowIsFloating">true</item>-->
+        <!-- Dialog 进入及退出动画 -->
+        <!--<item name="android:windowAnimationStyle">@style/DialogSheetAnimation</item>-->
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <!-- 主页底部样式 -->
+    <style name="TabMainStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--ToolBar主题-->
+    <style name="ToolBarDark" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <!--ToolBar菜单主题-->
+    <style name="ToolBarPopupTheme" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ToolBarPopupTheme.Home">
+        <item name="android:textColorPrimary">@color/colorHome</item>
+    </style>
+
+    <style name="ToolBarPopupTheme.News">
+        <item name="android:textColorPrimary">@color/colorNews</item>
+    </style>
+
+    <style name="ToolBarPopupTheme.Book">
+        <item name="android:textColorPrimary">@color/colorBook</item>
+    </style>
+
+    <style name="ToolBarPopupTheme.Music">
+        <item name="android:textColorPrimary">@color/colorMusic</item>
+    </style>
+
+    <style name="ToolBarPopupTheme.Movie">
+        <item name="android:textColorPrimary">@color/colorMovie</item>
+    </style>
+
+    <style name="ToolBarPopupTheme.Navigation">
+        <item name="android:textColorPrimary">@color/colorNavigation</item>
+    </style>
+
+    <style name="navigationViewTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--项目描述标题栏展开样式-->
+    <style name="projectIntroductionExpandedTitleTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/transparent</item>
+    </style>
+
+    <!--音乐艺术家、专辑、文件夹详情标题栏展开样式-->
+    <style name="musicExpandedTitleTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!--水平分隔线-->
+    <style name="horizontalLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/colorItemDivideLine</item>
+    </style>
+
+    <!--item title-->
+    <style name="infoItemTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textColor">@color/colorTextGrayDark</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--item-->
+    <style name="infoItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:textColor">@color/colorTextBlack</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!--CheckBox主题-->
+    <style name="CheckBoxAndSwitchTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--1-->
+        <item name="colorAccent">@color/colorNavigation</item>
+        <!--2-->
+        <!--<item name="colorControlNormal">@color/colorTextGrayDark</item>-->
+        <!--<item name="colorControlActivated">@color/colorNavigation</item>-->
+    </style>
+</resources>

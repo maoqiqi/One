@@ -1,0 +1,34 @@
+<!--Static Shortcuts-->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_search_shortcut"
+        android:shortcutDisabledMessage="@string/shortcuts_search_disabled"
+        android:shortcutId="search"
+        android:shortcutLongLabel="@string/shortcuts_search_long"
+        android:shortcutShortLabel="@string/shortcuts_search_short">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.android.march.one.ui.activity.SearchActivity"
+            android:targetPackage="com.android.march.one11" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <!--shortcutId,唯一id-->
+    <!--enabled,表示这个shortcut是否可用-->
+    <!--shortcutShortLabel,这里是配置的短名称,下面还会有长名称,如果长名称显示不下,就显示短名称-->
+    <!--shortcutLongLabel,这里是配置的长名称,优先选择长名称显示-->
+    <!--shortcutDisabledMessage,这个配置是在我们选择一个不可用的shortcut时给用户的一个提示-->
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_collection_shortcut"
+        android:shortcutDisabledMessage="@string/shortcuts_collection_disabled"
+        android:shortcutId="collection"
+        android:shortcutLongLabel="@string/shortcuts_collection_long"
+        android:shortcutShortLabel="@string/shortcuts_collection_short">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.android.march.one.ui.activity.SearchActivity"
+            android:targetPackage="com.android.march.one11" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

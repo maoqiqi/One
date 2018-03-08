@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group_1"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_project_introduction"
+            android:icon="@drawable/ic_nav_project_introduction"
+            android:title="项目介绍" />
+
+        <item
+            android:id="@+id/nav_update_description"
+            android:icon="@drawable/ic_nav_update_description"
+            android:title="更新说明" />
+
+        <item
+            android:id="@+id/nav_scan_code_to_download"
+            android:icon="@drawable/ic_nav_scan_code_to_download"
+            android:title="扫码下载" />
+
+        <item
+            android:id="@+id/nav_problem_feedback"
+            android:icon="@drawable/ic_nav_problem_feedback"
+            android:title="问题反馈" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_nav_about"
+            android:title="关于" />
+    </group>
+</menu>

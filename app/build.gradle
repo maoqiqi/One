@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.android.march.one11"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:cardview-v7:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:palette-v7:$rootProject.ext.supportLibraryVersion"
+
+    // 注解
+    compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
+
+    // 网络
+    compile "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttpVersion"
+
+    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    compile "com.squareup.retrofit2:converter-scalars:$rootProject.ext.retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+
+    // Json 数据解析
+    compile "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+
+    compile "io.reactivex:rxjava:$rootProject.ext.rxjavaVersion"
+    compile "io.reactivex:rxandroid:$rootProject.rxandroidVersion"
+    compile "com.squareup.retrofit2:adapter-rxjava:$rootProject.ext.retrofitVersion"
+
+    // 图片加载框架
+    compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+
+    // Banner
+    compile "com.youth.banner:banner:$rootProject.ext.bannerVersion"
+
+    compile 'com.github.GrenderG:Toasty:1.2.8'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+    // 测试
+    testCompile "junit:junit:$rootProject.ext.junitVersion"
+
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
+    compile "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
+    compile "com.google.dagger:dagger-android:$rootProject.ext.daggerVersion"
+    compile "com.google.dagger:dagger-android-support:$rootProject.ext.daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.ext.daggerVersion"
+
+    compile 'com.google.android:flexbox:0.3.2'
+}
+
+android.applicationVariants.all { variant ->
+    def defaultVersionName = 'v' + android.defaultConfig.versionName
+    def versionName = 'v' + variant.getVersionName()
+    def buildTypeName = variant.buildType.name
+    def name = variant.name
+
+    println "---------------------------------------------------------------------------------------------------------------------------------"
+    println "defaultVersionName： " + defaultVersionName
+    println "versionName： " + versionName
+    println "buildTypeName： " + buildTypeName
+    println "name:" + name
+
+    variant.productFlavors.each { product ->
+        println "productName： " + product.name
+    }
+
+    variant.outputs.each { output ->
+        def time = new Date().format('yyyyMMddHHmmss', TimeZone.getTimeZone("UTC"))
+        output.outputFileName = "one-${buildTypeName}-${versionName}-${time}.apk"
+        println "输出文件位置：" + output.outputFileName
+    }
+}

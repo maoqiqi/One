@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">One</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="transition_book_img">transition_book_img</string>
+    <string name="transition_music_img">transition_music_img</string>
+    <string name="transition_movie_img">transition_movie_img</string>
+
+    <string-array name="gank_classify">
+        <item>All</item>
+        <item>Android</item>
+        <item>iOS</item>
+        <item>Front</item>
+        <item>Rest Movie</item>
+        <item>Resource</item>
+        <item>Recommend</item>
+        <item>Welfare</item>
+    </string-array>
+
+    <string name="collection">收藏</string>
+    <string name="search_history">搜索历史</string>
+    <string name="search_clean">清除</string>
+
+    <string-array name="music_array">
+        <item>Songs</item>
+        <item>Artists</item>
+        <item>Albums</item>
+        <item>Folders</item>
+    </string-array>
+
+    <string name="music_song_info">%1$s · %2$s</string>
+    <string name="music_artist_info">%1$d 张专辑 | %2$d 首歌</string>
+    <string name="music_album_info">%1$s | %2$d 首歌</string>
+    <string name="music_folder_info">%1$d首 %2$s</string>
+
+    <string name="sort_by">Sort by</string>
+    <string name="sort_order_az">A-Z</string>
+    <string name="sort_order_za">Z-A</string>
+    <string name="sort_order_artist">Artist</string>
+    <string name="sort_order_album">Album</string>
+    <string name="sort_order_duration">Duration</string>
+    <string name="sort_order_number_of_songs">Number of songs</string>
+    <string name="sort_order_number_of_albums">Number of albums</string>
+
+    <string name="read_external_storage">One will need to read external storage to display songs on your device.</string>
+    <string name="to_application_details_settings">To application details settings,authorization to read external storage to display songs on your device.</string>
+    <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
+    <string name="no_authorization_to_read_external_storage">One no authorization to read external storage to display songs on your device.</string>
+
+    <string name="song_info">Song ：%s</string>
+    <string name="artist_info">Artist ：%s</string>
+    <string name="album_info">Album ：%s</string>
+    <string name="folder_info">Folder ：%s</string>
+    <string name="play_next">Play next</string>
+    <string name="collect_song_list">Collect song list</string>
+    <string name="share">Share</string>
+    <string name="set_ring">Set ring</string>
+    <string name="song_information">Song information</string>
+    <string name="delete">Delete</string>
+
+    <string name="movie_director">Director：%s</string>
+    <string name="movie_star">Star：%s</string>
+    <string name="movie_classify">类型：%s</string>
+
+    <string name="scan_code_to_download">扫码下载</string>
+    <string name="download">喜欢就推荐给你的小伙伴吧，扫描二维码直接下载，或者点击右上角分享链接地址。</string>
+    <string name="star">喜欢的朋友请Star，欢迎一起学习讨论。你的支持将是我最大的动力与褒奖~ O(∩_∩)O ~</string>
+    <string name="download_url">https://raw.githubusercontent.com/maoqiqi/One/master/apk/One.apk</string>
+    <string name="share_download_content">发现一个优秀开源项目，里面有大量IT干货，每天提供安卓，IOS等最新资讯，还有最新新闻、图书排行版、音乐、正在热映和即将上映电影，大力推荐哦~：%s</string>
+    <string name="project_url">https://github.com/maoqiqi/One</string>
+
+    <string name="project_introduction">项目介绍</string>
+
+    <string name="update_description">更新说明</string>
+
+    <string name="problem_feedback">问题反馈</string>
+    <string name="problem_feedback_content">您好，很希望得到您的意见，您可以在GitHub的Issues处说明问题原因，也可以通过以下方式联系我 ~ </string>
+    <string name="issues_name">Issues</string>
+    <string name="issues_url">https://github.com/maoqiqi/One/issues</string>
+    <string name="faq_name">常见问题</string>
+    <string name="faq_url">http://jingbin.me/2016/12/25/常见问题-云阅/</string>
+    <string name="contact_me">联系我</string>
+
+    <string name="about">关于</string>
+    <string name="current_version">当前版本 V%s</string>
+    <string name="check_update">检查更新</string>
+    <string name="give_a_star">给个Star吧</string>
+    <string name="donate">捐赠开发者</string>
+    <string name="gank_api">http://gank.io/api</string>
+    <string name="dou_ban_terms">https://developers.douban.com/wiki/?title=terms</string>
+
+    <string name="setting">设置</string>
+
+    <string name="shortcuts_search_short">搜索</string>
+    <string name="shortcuts_search_long">搜索</string>
+    <string name="shortcuts_search_disabled">搜索（不可用）</string>
+    <string name="shortcuts_collection_short">收藏</string>
+    <string name="shortcuts_collection_long">我的收藏</string>
+    <string name="shortcuts_collection_disabled">收藏（不可用）</string>
+
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+</resources>

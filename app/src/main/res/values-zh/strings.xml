@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">One</string>
+
+    <string-array name="gank_classify">
+        <item>全部</item>
+        <item>Android</item>
+        <item>iOS</item>
+        <item>前端</item>
+        <item>休息视频</item>
+        <item>拓展资源</item>
+        <item>瞎推荐</item>
+        <item>福利</item>
+    </string-array>
+
+    <string-array name="music_array">
+        <item>歌曲</item>
+        <item>艺术家</item>
+        <item>专辑</item>
+        <item>文件夹</item>
+    </string-array>
+
+    <string name="music_song_info">%1$s · %2$s</string>
+    <string name="music_artist_info">%1$d 张专辑 | %2$d 首歌</string>
+    <string name="music_album_info">%1$s | %2$d 首歌</string>
+    <string name="music_folder_info">%1$d首 %2$s</string>
+
+    <string name="sort_by">排序</string>
+    <string name="sort_order_az">A-Z</string>
+    <string name="sort_order_za">Z-A</string>
+    <string name="sort_order_artist">艺术家</string>
+    <string name="sort_order_album">专辑</string>
+    <string name="sort_order_duration">时长</string>
+    <string name="sort_order_number_of_songs">歌曲数</string>
+    <string name="sort_order_number_of_albums">专辑数</string>
+
+    <string name="read_external_storage">One将读取外部存储以在您的设备上显示歌曲。</string>
+    <string name="to_application_details_settings">去应用程序详情设置，授权读取外部存储以在设备上显示歌曲。</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="no_authorization_to_read_external_storage">One没有权限读取外部存储，以在您的设备上显示歌曲。</string>
+
+    <string name="song_info">歌曲 ：%s</string>
+    <string name="artist_info">艺术家 ：%s</string>
+    <string name="album_info">专辑 ：%s</string>
+    <string name="folder_info">文件夹 ：%s</string>
+    <string name="play_next">下一首播放</string>
+    <string name="collect_song_list">收藏到歌单</string>
+    <string name="share">分享</string>
+    <string name="set_ring">设为铃声</string>
+    <string name="song_information">查看歌曲信息</string>
+    <string name="delete">删除</string>
+
+    <string name="movie_director">导演：%s</string>
+    <string name="movie_star">主演：%s</string>
+    <string name="movie_classify">类型：%s</string>
+
+</resources>

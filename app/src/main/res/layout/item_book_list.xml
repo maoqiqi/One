@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivBook"
+        android:layout_width="78dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_book_placeholder"
+        android:transitionName="@string/transition_book_img" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvBookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="标题"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvBookAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="作者"
+            android:textColor="@color/colorTextGrayDark"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvBookPublish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="出版社/时间"
+            android:textColor="@color/colorTextGrayDark"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvBookPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="价格"
+            android:textColor="@color/colorTextGrayDark"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:isIndicator="true"
+                android:progressDrawable="@drawable/rating_bar" />
+
+            <TextView
+                android:id="@+id/tvBookRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:text="9.0"
+                android:textColor="@color/colorTextGrayDark"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
