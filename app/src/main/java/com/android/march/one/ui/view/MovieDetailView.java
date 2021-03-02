@@ -2,11 +2,11 @@ package com.android.march.one.ui.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -18,9 +18,9 @@ import com.android.march.one.R;
 import com.android.march.one.RootView;
 import com.android.march.one.adapter.RecyclerViewAdapter;
 import com.android.march.one.adapter.TypeFactory;
-import com.android.march.one.model.bean.MovieActorBean;
+import com.android.march.one.model.bean.ActorBean;
+import com.android.march.one.model.bean.DirectorBean;
 import com.android.march.one.model.bean.MovieDetailBean;
-import com.android.march.one.model.bean.MovieListBean;
 import com.android.march.one.presenter.contract.MovieDetailContract;
 import com.android.march.one.ui.SpaceItemDecoration;
 import com.android.march.one.ui.activity.WebViewActivity;
@@ -28,7 +28,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -115,6 +114,7 @@ public class MovieDetailView extends RootView<MovieDetailContract.Presenter> imp
         nestedScrollView.setOnScrollChangeListener((NestedScrollView.OnScrollChangeListener) (v, scrollX, scrollY, oldScrollX, oldScrollY) -> scrollChangeHeader(scrollY));
 
         presenter.getMovieDetail(id);
+        presenter.getMovieDetailPersonList(id);
     }
 
     // 根据页面滑动距离改变Header方法
@@ -134,53 +134,32 @@ public class MovieDetailView extends RootView<MovieDetailContract.Presenter> imp
 
     @Override
     public void setMovieDetail(MovieDetailBean movieDetailBean) {
-        url = movieDetailBean.getShareUrl();
-
-        tvMovieTitle.setText(movieDetailBean.getTitle());
-        tvMovieGenre.setText("类型：" + OneUtils.formatGenre(movieDetailBean.getGenreList()));
-        tvMovieYear.setText("上映日期：" + movieDetailBean.getYear());
-        tvCountry.setText("制片国家/地区：" + OneUtils.formatCountry(movieDetailBean.getCountryList()));
-        ratingBar.setRating(movieDetailBean.getRatingBean().getAverage() / 2);
-        tvMovieRating.setText(movieDetailBean.getRatingBean().getAverage().toString());
-        tvMovieNumRaters.setText(movieDetailBean.getCollectCount() + "人");
-
-        OneUtils.setTextImageSwitch(MAX_LINE, movieDetailBean.getSummary(), tvMovieSummary, ivMovieSummary);
+//        url = movieDetailBean.getShareUrl();
+//
+//        tvMovieTitle.setText(movieDetailBean.getTitle());
+//        tvMovieGenre.setText("类型：" + OneUtils.formatGenre(movieDetailBean.getGenreList()));
+//        tvMovieYear.setText("上映日期：" + movieDetailBean.getYear());
+//        tvCountry.setText("制片国家/地区：" + OneUtils.formatCountry(movieDetailBean.getCountryList()));
+//        ratingBar.setRating(movieDetailBean.getRatingBean().getAverage() / 2);
+//        tvMovieRating.setText(movieDetailBean.getRatingBean().getAverage().toString());
+//        tvMovieNumRaters.setText(movieDetailBean.getCollectCount() + "人");
+//
+        OneUtils.setTextImageSwitch(MAX_LINE, movieDetailBean.getData().getBasic().getStory(), tvMovieSummary, ivMovieSummary);
         ivMovieSummary.setOnClickListener(v -> {
             mMovieSummaryExpand = !mMovieSummaryExpand;
             OneUtils.imageSwitch(getContext(), MAX_LINE, mMovieSummaryExpand, tvMovieSummary, ivMovieSummary);
         });
 
-        List<MovieActorBean> movieActorList = new ArrayList();
-        MovieActorBean bean;
-        MovieListBean.DirectorBean directorBean;
-        MovieListBean.CastBean castBean;
-        for (int i = 0; i < movieDetailBean.getDirectorBeanList().size(); i++) {
-            bean = new MovieActorBean();
-            directorBean = movieDetailBean.getDirectorBeanList().get(i);
-            bean.setId(directorBean.getId());
-            bean.setAlt(directorBean.getAlt());
-            bean.setName(directorBean.getName());
-            bean.setAvatarBean(directorBean.getAvatarBean());
-            bean.setTypeName("导演");
-            movieActorList.add(bean);
-        }
-        for (int i = 0; i < movieDetailBean.getCastBeanList().size(); i++) {
-            bean = new MovieActorBean();
-            castBean = movieDetailBean.getCastBeanList().get(i);
-            bean.setId(castBean.getId());
-            bean.setAlt(castBean.getAlt());
-            bean.setName(castBean.getName());
-            bean.setAvatarBean(castBean.getAvatarBean());
-            bean.setTypeName("主演");
-            movieActorList.add(bean);
-        }
+        DirectorBean directorBean = movieDetailBean.getData().getBasic().getDirector();
+        List<ActorBean> list = movieDetailBean.getData().getBasic().getActors();
+        list.add(0, new ActorBean(directorBean.getDirectorId(), directorBean.getImg(), directorBean.getName(), directorBean.getNameEn()));
 
         recyclerViewMovieActor.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         recyclerViewMovieActor.setHasFixedSize(false);
         recyclerViewMovieActor.setItemAnimator(new DefaultItemAnimator());
         recyclerViewMovieActor.setNestedScrollingEnabled(false);
         recyclerViewMovieActor.addItemDecoration(new SpaceItemDecoration(getResources().getDimensionPixelSize(R.dimen.sixteen)));
-        recyclerViewMovieActor.setAdapter(new RecyclerViewAdapter<>(movieActorList, new TypeFactory().setMovieActorData()));
+        recyclerViewMovieActor.setAdapter(new RecyclerViewAdapter<>(list, new TypeFactory().setMovieActorData()));
     }
 
     @Override

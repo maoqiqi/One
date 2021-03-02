@@ -1,8 +1,8 @@
 package com.android.march.one.ui.view;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.util.AttributeSet;
 
 import com.android.march.one.R;

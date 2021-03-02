@@ -1,9 +1,9 @@
 package com.android.march.one.ui.view;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.widget.Toolbar;
 import android.util.AttributeSet;
 
 import com.android.march.one.R;
@@ -68,7 +68,7 @@ public class MovieView extends RootView<BasePresenter> {
     }
 
     private Fragment getFragment(int type) {
-        return MovieListFragment.newInstance(type, "上海", "", "");
+        return MovieListFragment.newInstance(type, "561", "", "");
     }
 
     public void search() {

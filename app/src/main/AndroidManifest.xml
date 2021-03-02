@@ -72,21 +72,6 @@
             android:screenOrientation="portrait" />
 
         <!--导航部分-->
-        <activity
-            android:name=".ui.activity.ProjectIntroductionActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.UpdateDescriptionActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.ScanCodeToDownloadActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.ProblemFeedbackActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.activity.AboutActivity"
-            android:screenOrientation="portrait" />
 
         <!--设置-->
         <activity

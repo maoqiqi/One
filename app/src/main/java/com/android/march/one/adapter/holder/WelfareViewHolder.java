@@ -2,7 +2,7 @@ package com.android.march.one.adapter.holder;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;

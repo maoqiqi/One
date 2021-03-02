@@ -1,12 +1,12 @@
 package com.android.march.one.ui.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +23,7 @@ import com.android.march.one.model.bean.MusicArtistBean;
 import com.android.march.one.model.bean.MusicMoreItemBean;
 import com.android.march.one.model.bean.MusicSongBean;
 import com.android.march.one.utils.MusicUtils;
-import com.android.march.one.utils.ScreenUtils;
+import com.codearms.maoqiqi.android.ScreenUtilsKt;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -103,7 +103,7 @@ public class MusicMoreFragment extends DialogFragment {
             window.setBackgroundDrawableResource(android.R.color.transparent);
             WindowManager.LayoutParams params = window.getAttributes();
             params.width = WindowManager.LayoutParams.MATCH_PARENT;
-            int halfScreenHeight = ScreenUtils.getScreenHeight() / 2;
+            int halfScreenHeight = ScreenUtilsKt.getScreenHeight(getActivity()) / 2;
             if (view.getHeight() > halfScreenHeight)
                 params.height = halfScreenHeight;
             else

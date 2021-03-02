@@ -1,15 +1,12 @@
 package com.android.march.one.ui.view;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
 
 import com.android.march.one.OneUtils;
 import com.android.march.one.R;
-import com.android.march.one.RecyclerViewScrollListener;
 import com.android.march.one.RootView;
 import com.android.march.one.adapter.RecyclerViewAdapter;
 import com.android.march.one.adapter.TypeFactory;

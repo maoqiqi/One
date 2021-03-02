@@ -7,9 +7,9 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.provider.Settings;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.widget.Toast;
 

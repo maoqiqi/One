@@ -12,7 +12,7 @@
         android:layout_height="@dimen/status_bar_height"
         android:background="@color/colorNavigation" />
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -60,7 +60,7 @@
                 android:contentDescription="@null"
                 android:src="@drawable/ic_menu_search" />
         </LinearLayout>
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:id="@+id/llSearchHistory"
@@ -100,21 +100,21 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp" />
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewSearchHistory"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbarThumbVertical="@color/colorHome" />
     </LinearLayout>
 
-    <android.support.v4.widget.SwipeRefreshLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewSearch"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbarThumbVertical="@color/colorHome" />
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </LinearLayout>

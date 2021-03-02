@@ -17,7 +17,7 @@ public class RetrofitManager {
     private final String BASE_NEWS_URL = "http://news-at.zhihu.com/api/4/";
     private final String BASE_BOOK_URL = "https://api.douban.com/v2/";
     private final String BASE_MUSIC_URL = "";
-    private final String BASE_MOVIE_URL = "https://api.douban.com/v2/";
+    private final String BASE_MOVIE_URL = "https://api-m.mtime.cn";
 
     private static RetrofitManager instance;
 

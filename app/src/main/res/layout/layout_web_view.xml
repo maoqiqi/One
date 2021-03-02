@@ -11,7 +11,7 @@
         android:layout_height="@dimen/status_bar_height"
         android:background="@color/colorNavigation" />
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -43,7 +43,7 @@
             android:progressDrawable="@drawable/bg_web_view_progress"
             android:visibility="gone" />
 
-        <android.support.design.widget.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabCollection"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

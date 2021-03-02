@@ -10,7 +10,7 @@
         android:layout_height="@dimen/status_bar_height"
         android:background="@color/colorHome" />
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -18,7 +18,7 @@
         android:theme="@style/ToolBarDark"
         app:title="首页" />
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -39,11 +39,11 @@
                 app:indicator_margin="3dp"
                 app:indicator_width="6dp" />
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
 
         </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>

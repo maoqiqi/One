@@ -3,7 +3,7 @@ package com.android.march.one.ui.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.Gravity;
 import android.view.Window;
 import android.view.WindowManager;
@@ -15,7 +15,7 @@ import com.android.march.one.model.bean.MusicArtistBean;
 import com.android.march.one.model.bean.MusicSongBean;
 import com.android.march.one.ui.view.MusicMoreView;
 import com.android.march.one.utils.MusicUtils;
-import com.android.march.one.utils.ScreenUtils;
+import com.codearms.maoqiqi.android.ScreenUtilsKt;
 
 public class MusicMoreActivity extends BaseActivity {
 
@@ -68,7 +68,7 @@ public class MusicMoreActivity extends BaseActivity {
             window.setBackgroundDrawableResource(android.R.color.transparent);
             WindowManager.LayoutParams params = window.getAttributes();
             params.width = WindowManager.LayoutParams.MATCH_PARENT;
-            int halfScreenHeight = ScreenUtils.getScreenHeight() / 2;
+            int halfScreenHeight = ScreenUtilsKt.getScreenHeight(this) / 2;
             if (musicMoreView.getHeight() > halfScreenHeight)
                 params.height = halfScreenHeight;
             else

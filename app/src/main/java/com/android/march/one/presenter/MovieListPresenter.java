@@ -19,7 +19,7 @@ public class MovieListPresenter implements MovieListContract.Presenter {
 
     @Override
     public void getInTheatersMovies(String city, int start, int count) {
-        RetrofitManager.getInstance().getMovieAPI().inTheatersMovies(city, start, count)
+        RetrofitManager.getInstance().getMovieAPI().inTheatersMovies(city)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new MyObserver<MovieListBean>() {

@@ -2,8 +2,8 @@ package com.android.march.one.ui.view;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 

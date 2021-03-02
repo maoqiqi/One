@@ -2,9 +2,9 @@ package com.android.march.one.ui.view;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.widget.Toolbar;
 import android.util.AttributeSet;
 import android.view.View;
 import android.webkit.WebChromeClient;

@@ -1,7 +1,7 @@
 package com.android.march.one.ui.view;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.march.one.OneUtils;
 import com.android.march.one.R;

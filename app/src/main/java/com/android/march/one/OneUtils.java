@@ -10,14 +10,14 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.graphics.Palette;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.core.content.ContextCompat;
+import androidx.palette.graphics.Palette;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
@@ -26,7 +26,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.march.one.model.bean.MovieListBean;
+import com.android.march.one.model.bean.CastBean;
+import com.android.march.one.model.bean.DirectorBean;
 
 import java.lang.reflect.Field;
 import java.util.List;
@@ -36,7 +37,7 @@ public class OneUtils {
     /**
      * 格式化导演名字
      */
-    public static String formatDirectorName(List<MovieListBean.DirectorBean> directorBeanList) {
+    public static String formatDirectorName(List<DirectorBean> directorBeanList) {
         if (directorBeanList != null && directorBeanList.size() > 0) {
             StringBuilder stringBuilder = new StringBuilder();
             for (int i = 0; i < directorBeanList.size(); i++) {
@@ -55,7 +56,7 @@ public class OneUtils {
     /**
      * 格式化主演名字
      */
-    public static String formatCastName(List<MovieListBean.CastBean> castBeanList) {
+    public static String formatCastName(List<CastBean> castBeanList) {
         if (castBeanList != null && castBeanList.size() > 0) {
             StringBuilder stringBuilder = new StringBuilder();
             for (int i = 0; i < castBeanList.size(); i++) {

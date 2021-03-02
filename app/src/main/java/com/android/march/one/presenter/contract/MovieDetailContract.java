@@ -9,6 +9,8 @@ public interface MovieDetailContract {
     interface Presenter extends BasePresenter {
 
         void getMovieDetail(String id);
+
+        void getMovieDetailPersonList(String id);
     }
 
     interface View extends BaseView<Presenter> {

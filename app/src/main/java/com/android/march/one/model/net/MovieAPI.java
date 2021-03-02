@@ -2,6 +2,7 @@ package com.android.march.one.model.net;
 
 import com.android.march.one.model.bean.MovieDetailBean;
 import com.android.march.one.model.bean.MovieListBean;
+import com.android.march.one.model.bean.MovieTypePersonBean;
 
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -13,8 +14,9 @@ public interface MovieAPI {
     /**
      * 正在热映
      */
-    @GET("movie/in_theaters")
-    Observable<MovieListBean> inTheatersMovies(@Query("city") String city, @Query("start") int start, @Query("count") int count);
+    // https://ticket-api-m.mtime.cn/Showtime/LocationMovies.api?locationId=561
+    @GET("Showtime/LocationMovies.api")
+    Observable<MovieListBean> inTheatersMovies(@Query("locationId") String locationId);
 
     /**
      * 即将上映
@@ -23,17 +25,26 @@ public interface MovieAPI {
     Observable<MovieListBean> comingSoonMovies(@Query("start") int start, @Query("count") int count);
 
     /**
-     * 电影条目信息
-     *
-     * @param id
+     * 获取电影详情
      */
-    @GET("movie/subject/{id}")
-    Observable<MovieDetailBean> getMovieDetail(@Path("id") String id);
+    // https://api-m.mtime.cn/movie/detail.api?&locationId=290&movieId=215121
+    @GET("movie/detail.api")
+    Observable<MovieDetailBean> getMovieDetail(@Query("locationId") String locationId, @Query("movieId") String movieId);
+
+    // https://api-m.mtime.cn/Movie/MovieCreditsWithTypes.api?&movieId=215121
+    @GET("Movie/MovieCreditsWithTypes.api")
+    Observable<MovieTypePersonBean> getMovieDetailPersonList(@Query("movieId") String movieId);
+
+    // https://api-m.mtime.cn/Showtime/HotMovieComments.api?&movieId=215121&pageIndex=1
+
+    // https://api-m.mtime.cn/Movie/MovieComingNew.api?locationId=290
+
+    // https://api-m.mtime.cn/Showtime/LocationMovies.api?locationId=561
+
+    // https://api-m.mtime.cn/OnlineLocationCinema/OnlineCinemasByCity.api?locationId=290
 
     /**
      * 影人条目信息
-     *
-     * @param id
      */
     @GET("movie/celebrity/{id}")
     Observable<String> getCelebrity(@Path("id") String id);

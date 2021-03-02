@@ -2,13 +2,13 @@ package com.android.march.one.ui.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.tabs.TabLayout;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.widget.Toolbar;
 import android.util.AttributeSet;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -16,7 +16,6 @@ import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.march.one.ActivityUtils;
 import com.android.march.one.AppBarStateChangeListener;
 import com.android.march.one.OneUtils;
 import com.android.march.one.R;
@@ -29,6 +28,7 @@ import com.android.march.one.ui.fragment.GankListFragment;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
+import com.codearms.maoqiqi.android.IntentUtils;
 
 import butterknife.BindView;
 
@@ -113,7 +113,7 @@ public class GankView extends RootView<GankContract.Presenter> implements GankCo
         tabLayout.setupWithViewPager(viewPager);
 
         tvSearchGank.setOnClickListener(v -> SearchActivity.start(getContext(), R.color.colorHome));
-        ivCollection.setOnClickListener(v -> ActivityUtils.startActivity(getContext(), GankCollectionActivity.class));
+        ivCollection.setOnClickListener(v -> IntentUtils.startActivity(getContext(), GankCollectionActivity.class));
         fabRandom.setOnClickListener(v -> getRandomHeaderImage());
     }
 

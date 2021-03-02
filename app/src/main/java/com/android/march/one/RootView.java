@@ -1,8 +1,8 @@
 package com.android.march.one;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.LinearLayout;
@@ -35,11 +35,7 @@ public abstract class RootView<P> extends LinearLayout implements ILoading {
     }
 
     public RootView(Context context, AttributeSet attrs, int defStyleAttr) {
-        this(context, attrs, defStyleAttr, 0);
-    }
-
-    public RootView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
+        super(context, attrs, defStyleAttr);
         this.activity = (AppCompatActivity) getContext();
         Log.d(TAG, TAG + "-->RootView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes)");
         if (getLayout() == 0) return;
@@ -58,7 +54,7 @@ public abstract class RootView<P> extends LinearLayout implements ILoading {
 
     // 返回
     public void back() {
-        ActivityUtils.getActivity(this).finish();
+        com.codearms.maoqiqi.android.ActivityUtils.getActivity(this).finish();
         // 不退出程序,进入后台
         // ((AppCompatActivity) getContext()).moveTaskToBack(true);
     }

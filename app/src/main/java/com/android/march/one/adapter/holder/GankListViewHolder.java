@@ -1,7 +1,7 @@
 package com.android.march.one.adapter.holder;
 
 import android.graphics.drawable.GradientDrawable;
-import android.support.v7.widget.CardView;
+import androidx.cardview.widget.CardView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;

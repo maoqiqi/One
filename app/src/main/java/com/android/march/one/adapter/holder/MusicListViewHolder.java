@@ -1,9 +1,9 @@
 package com.android.march.one.adapter.holder;
 
 import android.content.res.Resources;
-import android.support.v4.util.Pair;
-import android.support.v4.view.ViewCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.util.Pair;
+import androidx.core.view.ViewCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;

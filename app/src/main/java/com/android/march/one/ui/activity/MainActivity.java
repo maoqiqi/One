@@ -1,22 +1,22 @@
 package com.android.march.one.ui.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.android.march.one.ActivityUtils;
 import com.android.march.one.R;
 import com.android.march.one.StatusBarUtils;
 import com.android.march.one.T;
 import com.android.march.one.base.BaseActivity;
 import com.android.march.one.ui.view.MainView;
 import com.android.march.one.ui.view.MainView2;
+import com.codearms.maoqiqi.android.IntentUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -47,14 +47,14 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         unbinder = ButterKnife.bind(this);
 
         // 支持滑动切换
-        mainView.setVisibility(View.VISIBLE);
-        mainView2.setVisibility(View.GONE);
-        mainView.setData();
+//        mainView.setVisibility(View.VISIBLE);
+//        mainView2.setVisibility(View.GONE);
+//        mainView.setData();
 
         // 不支持滑动切换
-        /*mainView.setVisibility(View.GONE);
+        mainView.setVisibility(View.GONE);
         mainView2.setVisibility(View.VISIBLE);
-        mainView2.setData();*/
+        mainView2.setData();
 
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -70,19 +70,10 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     public boolean onNavigationItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_project_introduction:
-                ActivityUtils.startActivity(this, ProjectIntroductionActivity.class);
-                return true;
             case R.id.nav_update_description:
-                ActivityUtils.startActivity(this, UpdateDescriptionActivity.class);
-                return true;
             case R.id.nav_scan_code_to_download:
-                ActivityUtils.startActivity(this, ScanCodeToDownloadActivity.class);
-                return true;
             case R.id.nav_problem_feedback:
-                ActivityUtils.startActivity(this, ProblemFeedbackActivity.class);
-                return true;
             case R.id.nav_about:
-                ActivityUtils.startActivity(this, AboutActivity.class);
                 return true;
         }
         return false;
@@ -92,13 +83,12 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.ivScanCodeToDownload:
-                ActivityUtils.startActivity(this, ScanCodeToDownloadActivity.class);
                 break;
             case R.id.ivProject:
                 WebViewActivity.start(this, R.color.colorNavigation, "", getString(R.string.project_url));
                 break;
             case R.id.tvSetting:
-                ActivityUtils.startActivity(this, SettingActivity.class);
+                IntentUtils.startActivity(this, SettingActivity.class);
                 break;
             case R.id.tvMode:
                 T.info(this, "开发中");

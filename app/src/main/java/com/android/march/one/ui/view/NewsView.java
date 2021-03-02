@@ -1,10 +1,10 @@
 package com.android.march.one.ui.view;
 
 import android.content.Context;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.tabs.TabLayout;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.widget.Toolbar;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
@@ -39,6 +39,8 @@ public class NewsView extends RootView<BasePresenter> {
 
     public NewsView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        MainActivity mainActivity = (MainActivity) getContext();
+        mainActivity.associateDrawerLayout(toolbar);
     }
 
     @Override

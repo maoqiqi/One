@@ -7,14 +7,14 @@ import android.widget.TextView;
 
 import com.android.march.one.R;
 import com.android.march.one.adapter.RecyclerViewAdapter;
-import com.android.march.one.model.bean.MovieActorBean;
+import com.android.march.one.model.bean.ActorBean;
 import com.android.march.one.ui.activity.WebViewActivity;
 import com.bumptech.glide.Glide;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MovieActorViewHolder extends RecyclerViewAdapter.ViewHolder<MovieActorBean> {
+public class MovieActorViewHolder extends RecyclerViewAdapter.ViewHolder<ActorBean> {
 
     @BindView(R.id.llItem)
     LinearLayout llItem;
@@ -31,11 +31,11 @@ public class MovieActorViewHolder extends RecyclerViewAdapter.ViewHolder<MovieAc
     }
 
     @Override
-    protected void bindViewHolder(RecyclerViewAdapter<MovieActorBean> adapter, int position, MovieActorBean movieActorBean) {
-        Glide.with(ivMovieActor.getContext()).load(movieActorBean.getAvatarBean().getLarge()).placeholder(R.drawable.ic_picture_placeholder).into(ivMovieActor);
-        tvMovieActorName.setText(movieActorBean.getName());
-        tvMovieActorTypeName.setText(movieActorBean.getTypeName());
+    protected void bindViewHolder(RecyclerViewAdapter<ActorBean> adapter, int position, ActorBean actorBean) {
+        Glide.with(ivMovieActor.getContext()).load(actorBean.getImg()).placeholder(R.drawable.ic_picture_placeholder).into(ivMovieActor);
+        tvMovieActorName.setText(actorBean.getName());
+        tvMovieActorTypeName.setText(position == 0 ? "导演" : "主演");
 
-        llItem.setOnClickListener(v -> WebViewActivity.start(v.getContext(), R.color.colorMovie, "", movieActorBean.getAlt()));
+        llItem.setOnClickListener(v -> WebViewActivity.start(v.getContext(), R.color.colorMovie, "", actorBean.getImg()));
     }
 }

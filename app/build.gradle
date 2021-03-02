@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -9,7 +12,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     buildTypes {
         release {
@@ -24,52 +27,55 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation 'com.codearms.maoqiqi:lib-android:1.0.2'
+    implementation 'com.codearms.maoqiqi:lib-databinding:1.0.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
-    compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
-    compile "com.android.support:cardview-v7:$rootProject.ext.supportLibraryVersion"
-    compile "com.android.support:palette-v7:$rootProject.ext.supportLibraryVersion"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.palette:palette:1.0.0'
 
     // 注解
-    compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
-    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
+    implementation "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    kapt "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
 
     // 网络
-    compile "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttpVersion"
 
-    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
-    compile "com.squareup.retrofit2:converter-scalars:$rootProject.ext.retrofitVersion"
-    compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-scalars:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
 
     // Json 数据解析
-    compile "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+    implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
 
-    compile "io.reactivex:rxjava:$rootProject.ext.rxjavaVersion"
-    compile "io.reactivex:rxandroid:$rootProject.rxandroidVersion"
-    compile "com.squareup.retrofit2:adapter-rxjava:$rootProject.ext.retrofitVersion"
+    implementation "io.reactivex:rxjava:$rootProject.ext.rxjavaVersion"
+    implementation "io.reactivex:rxandroid:$rootProject.rxandroidVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava:$rootProject.ext.retrofitVersion"
 
     // 图片加载框架
-    compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
 
     // Banner
-    compile "com.youth.banner:banner:$rootProject.ext.bannerVersion"
+    implementation "com.youth.banner:banner:$rootProject.ext.bannerVersion"
 
-    compile 'com.github.GrenderG:Toasty:1.2.8'
-    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.github.GrenderG:Toasty:1.2.8'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
 
     // 测试
-    testCompile "junit:junit:$rootProject.ext.junitVersion"
+    testImplementation "junit:junit:$rootProject.ext.junitVersion"
 
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
-    compile "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
-    compile "com.google.dagger:dagger-android:$rootProject.ext.daggerVersion"
-    compile "com.google.dagger:dagger-android-support:$rootProject.ext.daggerVersion"
+    implementation "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
+    implementation "com.google.dagger:dagger-android:$rootProject.ext.daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.ext.daggerVersion"
     annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.ext.daggerVersion"
 
-    compile 'com.google.android:flexbox:0.3.2'
+    implementation 'com.google.android:flexbox:0.3.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 android.applicationVariants.all { variant ->
